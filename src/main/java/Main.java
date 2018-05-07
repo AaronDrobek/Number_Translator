@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] arg) {
         int number;
         do {
-            System.out.print("Please enter a positive number between 1 - 999 ");
+            System.out.print("Please enter a positive number between 1 - 1000 ");
             while (!keyboard.hasNextInt()) {
                 String input = keyboard.next();
                 System.out.printf("\"%s\" is not a valid number.\n Please enter a valid number: ", input);
@@ -25,7 +25,7 @@ public class Main {
         Double highCeiling = Math.floor((number / 1000) % 10);
 
 
-        if (number >= 0) {
+        if (number >= 0 && number <=1000) {
 
             switch (length) {
                 case 1:
@@ -75,8 +75,10 @@ public class Main {
                         System.out.println("---------number not within range, please try again-----------");
                     }
             }
-        }
-    }
+        }else{
+            System.out.println("---------number not within range, please try again---------");
+
+        }    }
 }
 
 
