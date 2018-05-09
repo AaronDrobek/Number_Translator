@@ -8,13 +8,17 @@ public class Main {
     public static void main(String[] arg) {
         int number;
         do {
-            System.out.print("Please enter a positive number between 1 - 1000 ");
+            System.out.print("Please enter a positive number between 0 - 1000 ");
             while (!keyboard.hasNextInt()) {
-                String input = keyboard.next();
+                String input = keyboard.nextLine();
                 System.out.printf("\"%s\" is not a valid number.\n Please enter a valid number: ", input);
             }
-            number = keyboard.nextInt();
-        } while (number < 0);
+            String input = keyboard.nextLine();
+            number = Integer.parseInt(input.replace(" ",""));
+
+
+        }
+        while (number < 0);
 
         System.out.printf("You have entered %d\n In english your number is: \n", number);
 
